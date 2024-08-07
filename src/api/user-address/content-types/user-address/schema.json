@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_addresses",
+  "info": {
+    "singularName": "user-address",
+    "pluralName": "user-addresses",
+    "displayName": "userAddress",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "adresss": {
+      "type": "text"
+    },
+    "LandMark": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "integer"
+    },
+    "userids": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "useraddress"
+    }
+  }
+}
