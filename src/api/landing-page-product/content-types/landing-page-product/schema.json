@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_page_products",
+  "info": {
+    "singularName": "landing-page-product",
+    "pluralName": "landing-page-products",
+    "displayName": "Landing page product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "productImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

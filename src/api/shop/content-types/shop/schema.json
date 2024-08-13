@@ -16,7 +16,7 @@
       "type": "string"
     },
     "productRating": {
-      "type": "integer"
+      "type": "decimal"
     },
     "productPrice": {
       "type": "integer"
@@ -34,6 +34,9 @@
     },
     "productCategory": {
       "type": "string"
+    },
+    "discount": {
+      "type": "integer"
     }
   }
 }

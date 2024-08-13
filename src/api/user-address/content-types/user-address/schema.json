@@ -15,17 +15,14 @@
     "adresss": {
       "type": "text"
     },
-    "LandMark": {
-      "type": "string"
+    "landMark": {
+      "type": "text"
     },
     "phone": {
       "type": "integer"
     },
-    "userids": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "useraddress"
+    "userId": {
+      "type": "integer"
     }
   }
 }
