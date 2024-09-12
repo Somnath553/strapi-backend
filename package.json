@@ -20,7 +20,9 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "5.3.4",
     "sqlite3": "5.0.0",
+    "pg": "8.8.0",
     "strapi-google-auth": "^0.2.1",
+    "strapi-plugin-vercel-deploy": "^1.4.0",
     "styled-components": "5.3.3"
   },
   "author": {
