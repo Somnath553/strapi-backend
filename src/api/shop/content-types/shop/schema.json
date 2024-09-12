@@ -16,14 +16,14 @@
       "type": "string"
     },
     "productRating": {
-      "type": "integer"
+      "type": "decimal"
     },
     "productPrice": {
       "type": "integer"
     },
     "productImage": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images",
@@ -34,6 +34,9 @@
     },
     "productCategory": {
       "type": "string"
+    },
+    "discount": {
+      "type": "integer"
     }
   }
 }
