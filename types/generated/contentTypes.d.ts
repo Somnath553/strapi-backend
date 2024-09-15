@@ -832,6 +832,41 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAvirigRemediesPackAvirigRemediesPack
+  extends Schema.CollectionType {
+  collectionName: 'avirig_remedies_packs';
+  info: {
+    singularName: 'avirig-remedies-pack';
+    pluralName: 'avirig-remedies-packs';
+    displayName: 'AvirigRemediesPacks';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    image: Attribute.Media;
+    price: Attribute.Integer;
+    description: Attribute.String;
+    category: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::avirig-remedies-pack.avirig-remedies-pack',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::avirig-remedies-pack.avirig-remedies-pack',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogBlog extends Schema.CollectionType {
   collectionName: 'blogs';
   info: {
@@ -913,6 +948,8 @@ export interface ApiShopShop extends Schema.CollectionType {
     productImage: Attribute.Media;
     productCategory: Attribute.String;
     discount: Attribute.Integer;
+    productDescription: Attribute.RichText;
+    SpecialMessage: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -976,6 +1013,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::avirig-remedies-pack.avirig-remedies-pack': ApiAvirigRemediesPackAvirigRemediesPack;
       'api::blog.blog': ApiBlogBlog;
       'api::landing-page-product.landing-page-product': ApiLandingPageProductLandingPageProduct;
       'api::shop.shop': ApiShopShop;

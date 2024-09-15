@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "avirig_remedies_packs",
+  "info": {
+    "singularName": "avirig-remedies-pack",
+    "pluralName": "avirig-remedies-packs",
+    "displayName": "AvirigRemediesPacks"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "price": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}

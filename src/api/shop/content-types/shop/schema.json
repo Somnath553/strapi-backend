@@ -37,6 +37,12 @@
     },
     "discount": {
       "type": "integer"
+    },
+    "productDescription": {
+      "type": "richtext"
+    },
+    "SpecialMessage": {
+      "type": "string"
     }
   }
 }
