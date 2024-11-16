@@ -950,6 +950,8 @@ export interface ApiShopShop extends Schema.CollectionType {
     discount: Attribute.Integer;
     productDescription: Attribute.RichText;
     SpecialMessage: Attribute.String;
+    additionalinfo: Attribute.RichText;
+    productReviews: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

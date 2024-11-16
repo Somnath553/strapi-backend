@@ -43,6 +43,12 @@
     },
     "SpecialMessage": {
       "type": "string"
+    },
+    "additionalinfo": {
+      "type": "richtext"
+    },
+    "productReviews": {
+      "type": "json"
     }
   }
 }
