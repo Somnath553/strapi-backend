@@ -4,7 +4,8 @@
   "info": {
     "singularName": "avirig-remedies-pack",
     "pluralName": "avirig-remedies-packs",
-    "displayName": "AvirigRemediesPacks"
+    "displayName": "AvirigRemediesPacks",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,14 +16,15 @@
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "price": {
       "type": "integer"
@@ -31,6 +33,9 @@
       "type": "string"
     },
     "category": {
+      "type": "string"
+    },
+    "productUrl": {
       "type": "string"
     }
   }

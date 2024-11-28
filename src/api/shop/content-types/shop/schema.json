@@ -49,6 +49,9 @@
     },
     "productReviews": {
       "type": "json"
+    },
+    "productAbout": {
+      "type": "text"
     }
   }
 }

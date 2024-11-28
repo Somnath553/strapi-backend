@@ -4,7 +4,8 @@
   "info": {
     "singularName": "landing-page-product",
     "pluralName": "landing-page-products",
-    "displayName": "Landing page product"
+    "displayName": "Landing page product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,14 +22,18 @@
       "type": "decimal"
     },
     "productImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "productUrl": {
+      "type": "text"
     }
   }
 }

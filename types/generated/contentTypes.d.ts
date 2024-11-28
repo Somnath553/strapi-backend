@@ -839,6 +839,7 @@ export interface ApiAvirigRemediesPackAvirigRemediesPack
     singularName: 'avirig-remedies-pack';
     pluralName: 'avirig-remedies-packs';
     displayName: 'AvirigRemediesPacks';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -849,6 +850,7 @@ export interface ApiAvirigRemediesPackAvirigRemediesPack
     price: Attribute.Integer;
     description: Attribute.String;
     category: Attribute.String;
+    productUrl: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -903,6 +905,7 @@ export interface ApiLandingPageProductLandingPageProduct
     singularName: 'landing-page-product';
     pluralName: 'landing-page-products';
     displayName: 'Landing page product';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -912,6 +915,7 @@ export interface ApiLandingPageProductLandingPageProduct
     Description: Attribute.Text;
     price: Attribute.Decimal;
     productImage: Attribute.Media;
+    productUrl: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -952,6 +956,7 @@ export interface ApiShopShop extends Schema.CollectionType {
     SpecialMessage: Attribute.String;
     additionalinfo: Attribute.RichText;
     productReviews: Attribute.JSON;
+    productAbout: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
