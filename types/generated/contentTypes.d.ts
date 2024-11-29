@@ -851,6 +851,7 @@ export interface ApiAvirigRemediesPackAvirigRemediesPack
     description: Attribute.String;
     category: Attribute.String;
     productUrl: Attribute.String;
+    packImage: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -979,10 +980,15 @@ export interface ApiUserAddressUserAddress extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    adresss: Attribute.Text;
+    address: Attribute.Text;
     landMark: Attribute.Text;
-    phone: Attribute.Integer;
+    phone: Attribute.BigInteger;
     userId: Attribute.Integer;
+    pincode: Attribute.BigInteger;
+    full_name: Attribute.String;
+    email: Attribute.Email;
+    city: Attribute.String;
+    state: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -12,17 +12,32 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "adresss": {
+    "address": {
       "type": "text"
     },
     "landMark": {
       "type": "text"
     },
     "phone": {
-      "type": "integer"
+      "type": "biginteger"
     },
     "userId": {
       "type": "integer"
+    },
+    "pincode": {
+      "type": "biginteger"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
     }
   }
 }
