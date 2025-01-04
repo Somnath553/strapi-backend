@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_datas",
+  "info": {
+    "singularName": "order-data",
+    "pluralName": "order-datas",
+    "displayName": "OrderData",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderId": {
+      "type": "string"
+    },
+    "totalPrice": {
+      "type": "string"
+    },
+    "merchantTransactionId": {
+      "type": "string"
+    },
+    "transactionId": {
+      "type": "string"
+    },
+    "deliveryDate": {
+      "type": "string"
+    },
+    "OrderStatus": {
+      "type": "enumeration",
+      "enum": [
+        "OrderRecieved",
+        "OrderConfirmed",
+        "OrderShipped",
+        "Delivered",
+        "ReJected"
+      ]
+    },
+    "phonePeResponse": {
+      "type": "json"
+    },
+    "paymentStatus": {
+      "type": "string"
+    },
+    "userAddress": {
+      "type": "richtext"
+    },
+    "orderData": {
+      "type": "json"
+    },
+    "userData": {
+      "type": "richtext"
+    },
+    "userId": {
+      "type": "biginteger"
+    }
+  }
+}

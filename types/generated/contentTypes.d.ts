@@ -935,6 +935,56 @@ export interface ApiLandingPageProductLandingPageProduct
   };
 }
 
+export interface ApiOrderDataOrderData extends Schema.CollectionType {
+  collectionName: 'order_datas';
+  info: {
+    singularName: 'order-data';
+    pluralName: 'order-datas';
+    displayName: 'OrderData';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    orderId: Attribute.String;
+    totalPrice: Attribute.String;
+    merchantTransactionId: Attribute.String;
+    transactionId: Attribute.String;
+    deliveryDate: Attribute.String;
+    OrderStatus: Attribute.Enumeration<
+      [
+        'OrderRecieved',
+        'OrderConfirmed',
+        'OrderShipped',
+        'Delivered',
+        'ReJected'
+      ]
+    >;
+    phonePeResponse: Attribute.JSON;
+    paymentStatus: Attribute.String;
+    userAddress: Attribute.RichText;
+    orderData: Attribute.JSON;
+    userData: Attribute.RichText;
+    userId: Attribute.BigInteger;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::order-data.order-data',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::order-data.order-data',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiShopShop extends Schema.CollectionType {
   collectionName: 'shops';
   info: {
@@ -1029,6 +1079,7 @@ declare module '@strapi/types' {
       'api::avirig-remedies-pack.avirig-remedies-pack': ApiAvirigRemediesPackAvirigRemediesPack;
       'api::blog.blog': ApiBlogBlog;
       'api::landing-page-product.landing-page-product': ApiLandingPageProductLandingPageProduct;
+      'api::order-data.order-data': ApiOrderDataOrderData;
       'api::shop.shop': ApiShopShop;
       'api::user-address.user-address': ApiUserAddressUserAddress;
     }
