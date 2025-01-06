@@ -1018,6 +1018,40 @@ export interface ApiShopShop extends Schema.CollectionType {
   };
 }
 
+export interface ApiSupportContactSupportContact extends Schema.CollectionType {
+  collectionName: 'support_contacts';
+  info: {
+    singularName: 'support-contact';
+    pluralName: 'support-contacts';
+    displayName: 'supportContact';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    fullName: Attribute.String;
+    email: Attribute.String;
+    subject: Attribute.String;
+    message: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::support-contact.support-contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::support-contact.support-contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiUserAddressUserAddress extends Schema.CollectionType {
   collectionName: 'user_addresses';
   info: {
@@ -1081,6 +1115,7 @@ declare module '@strapi/types' {
       'api::landing-page-product.landing-page-product': ApiLandingPageProductLandingPageProduct;
       'api::order-data.order-data': ApiOrderDataOrderData;
       'api::shop.shop': ApiShopShop;
+      'api::support-contact.support-contact': ApiSupportContactSupportContact;
       'api::user-address.user-address': ApiUserAddressUserAddress;
     }
   }

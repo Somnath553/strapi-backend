@@ -17,6 +17,28 @@ module.exports = ({ env }) => ({
     "strapi-google-auth": {
       enabled: true,
     },
+    email: {
+      config: {
+        provider: 'nodemailer',
+        providerOptions: {
+          host: 'smtp.gmail.com', // Specify Gmail's SMTP host
+          port: 587, // Port for STARTTLS
+          secure: false, // Use STARTTLS (secure: false)
+          auth: {
+            user: env('SMTP_USER'), // Your Gmail address
+            pass: env('SMTP_PASSWORD'), // Your Gmail app password
+          },
+          pool: true,
+          logger: true,
+          debug: true,
+          maxConnections: 10000,
+        },
+        settings: {
+          defaultFrom: env('SMTP_USER'),
+          defaultReplyTo: env('SMTP_USER'),
+        },
+      },
+    },
     // ...
   });
 
